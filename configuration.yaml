@@ -17,3 +17,13 @@ remote:
     slot: 1
     timeout: 30
     hidden: false
+    commands:
+      power_on:
+        command:
+          - 'mc4mEwlkxmkzmEsm0yAIKYzSYSyazgAg5sAiUxmEsmgA5TUBQpoAoQA6AQHOQIGApMBBwGPAh8BCwS7ApgCGATGB9OYzEJggTPAHwFTwbfAx8H3wF/AX8B/wD/An8RDgDzALIDfw/fAY8BjQIZBKcHrwWvCCcA9wBzm45kiN+CxM5mEA'
+      temp+:
+        command:
+          - 'mc4mEwlkxmkzmEsms5AIKYzYAgpwARU0AVKazQAegAyAg8BjwCKm0xAZIBAwHSAykAcwAyAy8CGgGSA6OYzEJgwGcm4HfgIGBkwA9gl4APgPvAL/NJqAv4F/AH+Av4B7gj8H94EEBU+Bj4clgpuDX4Qfgg+AR4FXgD5AAA=='
+      temp-:
+        command:
+          - 'mc3m0wlkxmk3mEsm0zAIKYzIAh5oAQUwmEsmgA5TWcADlNQB9ApUAMgGIAsIEKQAyAhkBkwEPAHSYgMcD9AGXgEEAqQGaBHuBD4Q+AMfNQ3yAg8NHwH/APgKVgD/A38B/wD/DCkBjwGIA5cRfwIZCb8Afw63BBKazkDgx3SEd8FHxJfgAA=='
