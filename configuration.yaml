@@ -21,9 +21,33 @@ remote:
       power_on:
         command:
           - 'mc4mEwlkxmkzmEsm0yAIKYzSYSyazgAg5sAiUxmEsmgA5TUBQpoAoQA6AQHOQIGApMBBwGPAh8BCwS7ApgCGATGB9OYzEJggTPAHwFTwbfAx8H3wF/AX8B/wD/An8RDgDzALIDfw/fAY8BjQIZBKcHrwWvCCcA9wBzm45kiN+CxM5mEA'
+      power_off:
+        command:
+          - 'mc3m0wlkxmk3mEsm0zAIKYzIAggAyAIUBEppNJhLJrOABymAB7ADmBBgCDAQOCF4DPgVGCnYFNgqeCZ4MzgD0Cp4DFAjkBjgEDzUAdpiA/4IGgL+Bv4B8AP+A+4C/gr+BOwYMgUcH54HXgD+DF4LXjxkDno3vgULAA=='
       temp_plus:
         command:
           - 'mc4mEwlkxmkzmEsms5AIKYzYAgpwARU0AVKazQAegAyAg8BjwCKm0xAZIBAwHSAykAcwAyAy8CGgGSA6OYzEJgwGcm4HfgIGBkwA9gl4APgPvAL/NJqAv4F/AH+Av4B7gj8H94EEBU+Bj4clgpuDX4Qfgg+AR4FXgD5AAA=='
       temp_minus:
         command:
           - 'mc3m0wlkxmk3mEsm0zAIKYzIAh5oAQUwmEsmgA5TWcADlNQB9ApUAMgGIAsIEKQAyAhkBkwEPAHSYgMcD9AGXgEEAqQGaBHuBD4Q+AMfNQ3yAg8NHwH/APgKVgD/A38B/wD/DCkBjwGIA5cRfwIZCb8Afw63BBKazkDgx3SEd8FHxJfgAA=='
+switch:
+  - platform: xiaomi_miio
+    host: 192.168.0.145
+    token: c2abc0497fb4ebdd04b163c266ec5912
+  - platform: template
+    switches:
+      Включить кондиционер:
+        value_template: "{{ is_state('xiaomi_miio_192_168_0_145', 'on') }}"
+        turn_on:
+          service: remote.send_command
+          data:
+            command:
+              - 'power_on'
+          entity_id: xiaomi_miio_192_168_0_145
+        turn_off:
+          service: remote.send_command
+          data:
+            command:
+              - 'power_off'
+          entity_id: xiaomi_miio_192_168_0_145
+
