@@ -41,11 +41,12 @@ switch:
         turn_on:
           service: remote.send_command
           data:
-            entity_id: xiaomi_miio_192_168_0_145
             command: power_on
+          entity_id: xiaomi_miio_192_168_0_145
         turn_off:
           service: remote.send_command
           data:
-            entity_id: xiaomi_miio_192_168_0_145
             command: power_off
+          entity_id: xiaomi_miio_192_168_0_145
+
 
